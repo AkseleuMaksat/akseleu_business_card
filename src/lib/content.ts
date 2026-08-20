@@ -270,4 +270,13 @@ export const PROJECTS: Project[] = [
       en: "Notch panel for macOS: extends the MacBook notch — local speech-to-text (Whisper), tasks, clipboard, music, battery.",
     },
   },
+  {
+    name: "CashMAks",
+    tags: ["Flutter", "Dart", "SQLite", "Offline-first"],
+    desc: {
+      ru: "Мобильный финансовый трекер: офлайн-first архитектура, локальное хранение данных и учёт личных расходов.",
+      kk: "Мобильді қаржы трекері: офлайн-first архитектура, деректерді жергілікті сақтау және жеке шығындар есебі.",
+      en: "Mobile finance tracker: offline-first architecture, local data persistence and personal expense tracking.",
+    },
+  },
 ];
