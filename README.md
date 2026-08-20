@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akseleu Maksat — Portfolio
 
-## Getting Started
+Премиальная one-page визитка backend-разработчика. Тёмная тема, bento-сетка, glassmorphism, микро-анимации.
 
-First, run the development server:
+**Live:** https://akseleu-dev.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Стек
+
+- **Next.js 16** (App Router) + **React 19**
+- **Tailwind CSS v4**
+- **Framer Motion** — анимации и переходы
+- **i18n** — 3 языка (RU по умолчанию, KZ, EN), переключатель в навбаре, выбор сохраняется в `localStorage`
+
+## Структура
+
+```
+src/
+├─ app/
+│  ├─ layout.tsx        # шрифты (Space Grotesk / JetBrains Mono), SEO/OG, I18nProvider
+│  ├─ page.tsx          # сборка секций
+│  └─ globals.css       # тема, сетка-фон, glass, marquee, aurora
+├─ components/
+│  ├─ Nav.tsx           # sticky-навбар + якорные ссылки + переключатель языка
+│  ├─ Hero.tsx          # заголовок, статы (2+ / 35% / 100+ / 5+)
+│  ├─ About.tsx         # «Обо мне» + bento-стек + бегущая строка
+│  ├─ Experience.tsx    # таймлайн: Halyk Bank, Bank CenterCredit, Umag, Sirius LTW
+│  ├─ Projects.tsx      # сетка проектов со spotlight-эффектом
+│  ├─ Contact.tsx       # CTA + футер
+│  ├─ SocialDock.tsx    # плавающий sticky-док соцсетей
+│  └─ icons.tsx         # SVG-иконки соцсетей и UI
+└─ lib/
+   ├─ content.ts        # контент: опыт, проекты, стек, соцсети
+   └─ i18n.tsx          # словарь RU/KZ/EN + контекст языка
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Локальный запуск
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # прод-сборка
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Деплой на Vercel (домен akseleu-dev.vercel.app)
 
-## Learn More
+1. Запушить репозиторий на GitHub:
+   ```bash
+   git remote add origin https://github.com/AkseleuMaksat/<repo>.git
+   git push -u origin main
+   ```
+2. На [vercel.com/new](https://vercel.com/new) импортировать репозиторий. Framework определится как **Next.js** автоматически (см. `vercel.json`).
+3. В **Settings → Domains** назначить `akseleu-dev.vercel.app`.
+4. CI/CD: пуш в `main` = прод-деплой, любая ветка/PR = preview-деплой.
 
-To learn more about Next.js, take a look at the following resources:
+Env-переменные не требуются — сайт полностью статический.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Правки контента
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Весь текст и данные — в `src/lib/content.ts` и `src/lib/i18n.tsx`. Компоненты трогать не нужно.
