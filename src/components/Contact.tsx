@@ -45,7 +45,6 @@ export default function Contact() {
 
       <footer className="mt-16 flex flex-col items-center gap-2 text-center text-xs text-muted">
         <div>© {new Date().getFullYear()} Akseleu Maksat</div>
-        <div>{t("footer.rights")}</div>
       </footer>
     </section>
   );
