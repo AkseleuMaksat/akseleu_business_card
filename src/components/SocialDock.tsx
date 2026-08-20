@@ -5,7 +5,6 @@ import { SOCIALS } from "@/lib/content";
 import {
   GitHubIcon,
   LinkedInIcon,
-  YouTubeIcon,
   InstagramIcon,
   LeetCodeIcon,
   MailIcon,
@@ -15,7 +14,6 @@ const ITEMS = [
   { href: SOCIALS.github, label: "GitHub", Icon: GitHubIcon },
   { href: SOCIALS.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
   { href: SOCIALS.leetcode, label: "LeetCode", Icon: LeetCodeIcon },
-  { href: SOCIALS.youtube, label: "YouTube", Icon: YouTubeIcon },
   { href: SOCIALS.instagram, label: "Instagram", Icon: InstagramIcon },
   { href: `mailto:${SOCIALS.email}`, label: "Email", Icon: MailIcon },
 ];

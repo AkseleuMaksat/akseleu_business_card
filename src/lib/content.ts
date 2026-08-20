@@ -9,7 +9,6 @@ export const LANGS: { code: Lang; label: string; flag: string }[] = [
 export const SOCIALS = {
   github: "https://github.com/AkseleuMaksat",
   linkedin: "https://www.linkedin.com/in/akseleu-maksat/",
-  youtube: "https://www.youtube.com/@akseleumaksat",
   instagram: "https://www.instagram.com/maksatakseleu/",
   leetcode: "https://leetcode.com/u/AkseleuMaksat/",
   email: "maksatakseleu@gmail.com",
@@ -211,16 +210,6 @@ export const PROJECTS: Project[] = [
       ru: "Full-stack CRM для распила панелей — самый серьёзный проект: доменная логика, авторизация через Keycloak, PostgreSQL, фронт на Nuxt 4.",
       kk: "Панельдерді кесуге арналған full-stack CRM — ең күрделі жоба: домендік логика, Keycloak авторизация, PostgreSQL, Nuxt 4 фронт.",
       en: "Full-stack panel-cutting CRM — my most serious project: domain logic, Keycloak auth, PostgreSQL, Nuxt 4 front-end.",
-    },
-  },
-  {
-    name: "SRM SIMBA",
-    featured: true,
-    tags: ["Next.js 15", "Supabase", "WhatsApp API"],
-    desc: {
-      ru: "CRM сервисных заявок для промышленности: статусная машина заявок, авто-уведомления WhatsApp (Green API) на KZ/RU.",
-      kk: "Өнеркәсіпке арналған сервистік өтінімдер CRM: өтінім статус машинасы, WhatsApp авто-хабарламалар (Green API) KZ/RU.",
-      en: "Service-request CRM for industry: request state machine, automatic WhatsApp notifications (Green API) in KZ/RU.",
     },
   },
   {
