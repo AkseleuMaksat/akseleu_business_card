@@ -35,7 +35,7 @@ export default function Experience() {
               {/* dot */}
               <span
                 className={`absolute left-0 top-2 grid h-4 w-4 place-items-center rounded-full md:h-6 md:w-6 ${
-                  e.current ? "bg-accent" : "bg-white/10 border border-[var(--border)]"
+                  e.current ? "bg-accent" : "bg-foreground/10 border border-[var(--border)]"
                 }`}
               >
                 {e.current && (

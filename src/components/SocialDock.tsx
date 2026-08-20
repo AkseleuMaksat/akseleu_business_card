@@ -34,10 +34,10 @@ export default function SocialDock() {
             target={href.startsWith("mailto") ? undefined : "_blank"}
             rel="noopener noreferrer"
             aria-label={label}
-            className="group relative grid h-10 w-10 place-items-center rounded-xl text-muted transition-all hover:-translate-y-1 hover:bg-white/10 hover:text-foreground"
+            className="group relative grid h-10 w-10 place-items-center rounded-xl text-muted transition-all hover:-translate-y-1 hover:bg-foreground/10 hover:text-foreground"
           >
             <Icon className="h-5 w-5" />
-            <span className="pointer-events-none absolute -top-9 whitespace-nowrap rounded-md bg-white px-2 py-1 text-xs font-medium text-black opacity-0 transition-opacity group-hover:opacity-100">
+            <span className="pointer-events-none absolute -top-9 whitespace-nowrap rounded-md bg-foreground px-2 py-1 text-xs font-medium text-background opacity-0 transition-opacity group-hover:opacity-100">
               {label}
             </span>
           </a>

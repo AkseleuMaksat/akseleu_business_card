@@ -67,7 +67,7 @@ export default function About() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Fintech", "High-load", "Microservices"].map((x) => (
-                <span key={x} className="rounded-full border border-[var(--border)] bg-white/5 px-3 py-1 text-xs">
+                <span key={x} className="rounded-full border border-[var(--border)] bg-foreground/5 px-3 py-1 text-xs">
                   {x}
                 </span>
               ))}
@@ -77,10 +77,10 @@ export default function About() {
       </div>
 
       {/* Stack ticker */}
-      <div className="marquee-mask relative mt-4 overflow-hidden rounded-3xl border border-[var(--border)] bg-white/[0.02] py-5">
+      <div className="marquee-mask relative mt-4 overflow-hidden rounded-3xl border border-[var(--border)] bg-foreground/[0.02] py-5">
         <div className="flex w-max animate-marquee gap-3">
           {[...TICKER, ...TICKER].map((x, i) => (
-            <span key={i} className="whitespace-nowrap rounded-full border border-[var(--border)] bg-white/5 px-4 py-2 font-mono text-sm text-foreground/80">
+            <span key={i} className="whitespace-nowrap rounded-full border border-[var(--border)] bg-foreground/5 px-4 py-2 font-mono text-sm text-foreground/80">
               {x}
             </span>
           ))}
@@ -101,7 +101,7 @@ export default function About() {
             <div className="mb-3 text-sm font-semibold text-accent">{groupLabel(g)}</div>
             <div className="flex flex-wrap gap-2">
               {g.items.map((it) => (
-                <span key={it} className="rounded-lg bg-white/5 px-2.5 py-1 font-mono text-xs text-foreground/80">
+                <span key={it} className="rounded-lg bg-foreground/5 px-2.5 py-1 font-mono text-xs text-foreground/80">
                   {it}
                 </span>
               ))}

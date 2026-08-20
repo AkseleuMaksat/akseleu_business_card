@@ -8,6 +8,20 @@
   --accent-2: #00e0c6;
   --card: rgba(255, 255, 255, 0.03);
   --border: rgba(255, 255, 255, 0.08);
+  --grid-line: rgba(255, 255, 255, 0.035);
+  --grad-start: #ffffff;
+}
+
+:root[data-theme="light"] {
+  --background: #f7f8fb;
+  --foreground: #0d1020;
+  --muted: #5a6072;
+  --accent: #5a4bf0;
+  --accent-2: #0aa593;
+  --card: rgba(13, 16, 32, 0.02);
+  --border: rgba(13, 16, 32, 0.1);
+  --grid-line: rgba(13, 16, 32, 0.05);
+  --grad-start: #0d1020;
 }
 
 @theme inline {
@@ -44,8 +58,8 @@ body {
 
 /* Ambient grid + glow background */
 .bg-grid {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
@@ -59,7 +73,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(120deg, #fff 0%, #b9b4ff 50%, var(--accent-2) 100%);
+  background: linear-gradient(120deg, var(--grad-start) 0%, var(--accent) 55%, var(--accent-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,11 +107,16 @@ body {
 }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #05060a; }
+::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb {
   background: rgba(109, 94, 252, 0.4);
   border-radius: 10px;
 }
+
+/* Surface helpers — adapt to theme via foreground alpha */
+.surface { background: color-mix(in srgb, var(--foreground) 5%, transparent); }
+.surface-2 { background: color-mix(in srgb, var(--foreground) 8%, transparent); }
+.hover-surface:hover { background: color-mix(in srgb, var(--foreground) 8%, transparent); }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee, .aurora { animation: none; }

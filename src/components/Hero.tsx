@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="aurora pointer-events-none absolute top-40 right-1/4 h-72 w-72 rounded-full bg-[var(--accent-2)]/20" style={{ animationDelay: "-6s" }} />
 
       <div className="relative z-10 w-full max-w-4xl text-center">
-        <motion.div custom={0} variants={fade} initial="hidden" animate="show" className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/5 px-4 py-1.5 text-xs text-muted">
+        <motion.div custom={0} variants={fade} initial="hidden" animate="show" className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-foreground/5 px-4 py-1.5 text-xs text-muted">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent-2)] opacity-70" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent-2)]" />
@@ -70,7 +70,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] bg-white/5 px-6 py-3 text-sm font-semibold transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] bg-foreground/5 px-6 py-3 text-sm font-semibold transition-colors hover:bg-foreground/10"
           >
             {t("hero.cta.contact")}
           </a>

@@ -41,7 +41,7 @@ function ProjectCard({
         {...linkProps}
         ref={ref as never}
         onMouseMove={onMove}
-        className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-white/[0.02] p-7 transition-colors hover:border-accent/40"
+        className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--border)] bg-foreground/[0.02] p-7 transition-colors hover:border-accent/40"
       >
         {/* spotlight */}
         <div
@@ -62,7 +62,7 @@ function ProjectCard({
             )}
           </div>
           {p.link ? (
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border)] bg-white/5 text-muted transition-all group-hover:border-accent group-hover:text-accent">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--border)] bg-foreground/5 text-muted transition-all group-hover:border-accent group-hover:text-accent">
               <ArrowIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
           ) : (
@@ -80,7 +80,7 @@ function ProjectCard({
           {p.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-lg bg-white/5 px-2.5 py-1 font-mono text-xs text-foreground/70"
+              className="rounded-lg bg-foreground/5 px-2.5 py-1 font-mono text-xs text-foreground/70"
             >
               {tag}
             </span>
